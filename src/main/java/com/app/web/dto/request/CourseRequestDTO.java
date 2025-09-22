@@ -1,19 +1,17 @@
-package com.app.web.dto;
+package com.app.web.dto.request;
 
+import java.util.List;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class StudentDTO {
+public class CourseRequestDTO {
     private Integer id;
     private String name;
-    private String email;
+    private String description;
 }

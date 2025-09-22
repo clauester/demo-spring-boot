@@ -1,12 +1,16 @@
 package com.app.web.mapper;
 
+import java.util.List;
 import org.mapstruct.Mapper;
-
+import org.mapstruct.factory.Mappers;
 import com.app.persistance.entity.CourseEntity;
-import com.app.web.dto.CourseDTO;
+import com.app.web.dto.request.CourseRequestDTO;
+import com.app.web.dto.response.CourseResponseDTO;
 
 @Mapper(componentModel = "spring")
 public interface CourseMapper {
-     CourseDTO toDto(CourseEntity course);
-    CourseEntity toEntity(CourseDTO dto);
+
+    CourseResponseDTO toDto(CourseEntity course);
+    List<CourseResponseDTO> toDtos(List<CourseEntity> courses);
+    CourseEntity toEntity(CourseRequestDTO dto);
 }

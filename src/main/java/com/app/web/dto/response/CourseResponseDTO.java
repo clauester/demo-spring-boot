@@ -1,9 +1,7 @@
-package com.app.web.dto;
+package com.app.web.dto.response;
 
 import java.util.List;
-import com.app.persistance.entity.GradeEntity;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,10 +10,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CourseDTO {
-
-    private Integer id;
+public class CourseResponseDTO {
     private String name;
     private String description;
-    private List<GradeEntity> grades;
+    private List<GradeResponseDTO> grades;
 }
