@@ -3,16 +3,12 @@ package com.app.service;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
-
 import com.app.persistance.entity.GradeEntity;
-import com.app.persistance.entity.StudentEntity;
 import com.app.persistance.repository.NoteRepository;
 import com.app.web.dto.request.GradeRequestDTO;
-import com.app.web.dto.request.StudentRequestDTO;
 import com.app.web.dto.response.GradeResponseDTO;
-import com.app.web.dto.response.StudentResponseDTO;
 import com.app.web.mapper.GradeMapper;
-import com.app.web.mapper.StudentMapper;
+
 @Service
 public class GradeService {
     
@@ -30,7 +26,7 @@ public class GradeService {
         .map(entity -> gradeMapper.toDto(entity))
         .collect(Collectors.toList());
     }
-    
+
     public GradeResponseDTO getById(Integer id){
         GradeEntity grade = noteRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Nota no encontrada con ID: " + id));

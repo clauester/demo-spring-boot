@@ -1,8 +1,6 @@
 package com.app.web;
 
 import java.util.List;
-
-import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,12 +11,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.app.service.GradeService;
 import com.app.web.dto.request.GradeRequestDTO;
-import com.app.web.dto.request.StudentRequestDTO;
 import com.app.web.dto.response.GradeResponseDTO;
-import com.app.web.dto.response.StudentResponseDTO;
 
 @RestController
 @RequestMapping("/api/notas")

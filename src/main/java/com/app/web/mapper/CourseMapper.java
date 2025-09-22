@@ -2,7 +2,6 @@ package com.app.web.mapper;
 
 import java.util.List;
 import org.mapstruct.Mapper;
-import org.mapstruct.factory.Mappers;
 import com.app.persistance.entity.CourseEntity;
 import com.app.web.dto.request.CourseRequestDTO;
 import com.app.web.dto.response.CourseResponseDTO;
